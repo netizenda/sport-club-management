@@ -1,8 +1,16 @@
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Sample data
+        SportsClubDB db = new SportsClubDB();
+        Connection conn= db.connection_to_db("spdb", "postgres", "danial29112006");
+        //db.createTable(conn, "employee");
+        //db.insert_row(conn, "employee", "danik", "Kazakhstan");
+        //db.update_name(conn, "employee", "Diana", "Dika");
+        //db.read_data(conn, "employee");
+        //db.delete_row_by_name(conn, "employee", "danik");
+
         Sport bjj = new TeamSport("Brazilian Jiu-Jitsu", "Team", 5, 12);
         Sport boxing = new IndividualSport("Boxing", "Individual", 1);
 
